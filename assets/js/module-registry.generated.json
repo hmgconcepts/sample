@@ -1,0 +1,584 @@
+[
+  {
+    "id": "academic_setup",
+    "name": "Academic Setup",
+    "category": "General",
+    "desc": "Enter/manage departments, terms, sessions, arms and academic periods used across the platform."
+  },
+  {
+    "id": "students",
+    "name": "Students & Profiles",
+    "category": "General",
+    "desc": "Central student information system with guardian info and Drive-linked photos."
+  },
+  {
+    "id": "staff",
+    "name": "Staff / Teachers",
+    "category": "General",
+    "desc": "Full staff records: teaching/non-teaching, subject taught, qualification, religion, marital status, photo (Drive link) and auto staff number. Approved teacher sign-ups are auto-added here."
+  },
+  {
+    "id": "classes",
+    "name": "Classes",
+    "category": "General",
+    "desc": "Create each class/arm and assign a class teacher by choosing from a staff dropdown — no typing. Set level and capacity."
+  },
+  {
+    "id": "subjects",
+    "name": "Subjects",
+    "category": "General",
+    "desc": "Register every subject once, give it a code/department/level, and map it to a teacher (chosen from staff). Used everywhere subjects are picked."
+  },
+  {
+    "id": "attendance",
+    "name": "Attendance",
+    "category": "General",
+    "desc": "Daily/class attendance. Pull a whole class PRESENT automatically from QR check-ins — no one-by-one typing. Parent alerts."
+  },
+  {
+    "id": "punctuality",
+    "name": "Punctuality Points",
+    "category": "General",
+    "desc": "Rewards students who check in before the deadline AND check out during closing — daily points, term leaderboard, one-click push into any Results report-card column. Builds punctuality culture."
+  },
+  {
+    "id": "results",
+    "name": "Results / Scores",
+    "category": "General",
+    "desc": "Enter CA + exam scores per student/subject/term/session (all chosen from dropdowns). Grades auto-suggested. Feeds report cards & promotion."
+  },
+  {
+    "id": "timetable",
+    "name": "Timetable",
+    "category": "General",
+    "desc": "Class & exam timetables with auto-conflict detection."
+  },
+  {
+    "id": "sow",
+    "name": "Scheme of Work",
+    "category": "General",
+    "desc": "Termly planning + weekly progress tracking with proprietor dashboard."
+  },
+  {
+    "id": "cbt",
+    "name": "CBT / Online Exams",
+    "category": "General",
+    "desc": "Full embedded CBT engine: 17 question types, CSV upload, timer, randomisation, negative marking, anti-cheat, certificates, link/code access — results auto-flow into report cards."
+  },
+  {
+    "id": "cbt-prompts",
+    "name": "AI Question Prompts",
+    "category": "General",
+    "desc": "Ready-made Simple/Intermediate/Advanced prompts you paste into any free AI chat to draft CBT questions in the exact CSV format — copy, edit, upload. The platform itself uses no paid AI."
+  },
+  {
+    "id": "entrance",
+    "name": "Entrance & Assessments",
+    "category": "General",
+    "desc": "Run entrance/common-entrance/placement exams that anonymous candidates can sit. Instant result slips, certificates and admission letters — single or bulk."
+  },
+  {
+    "id": "storage",
+    "name": "Storage Manager",
+    "category": "General",
+    "desc": "See how much Supabase space each table uses and safely purge old, low-value rows (after exporting) to make room — keeps you on the free tier."
+  },
+  {
+    "id": "report-cards",
+    "name": "Report Cards (flexible)",
+    "category": "General",
+    "desc": "Define custom assessment columns per subject (CA1, CA2, Assignment, Project, Exam) with apportioned max marks. CBT/online results auto-map into the right column. Totals, grades & positions computed."
+  },
+  {
+    "id": "analytics",
+    "name": "Analytics Dashboard",
+    "category": "General",
+    "desc": "Live, platform-wide KPIs & charts across every module to support informed decisions."
+  },
+  {
+    "id": "approvals",
+    "name": "Approvals",
+    "category": "General",
+    "desc": "Approve/reject prospective students, parents and staff (and admissions applications) right from the admin dashboard. Set roles, approve, suspend or delete."
+  },
+  {
+    "id": "admin-data",
+    "name": "Admin Data Console",
+    "category": "General",
+    "desc": "Admin-only: read, delete, full backup (JSON) and restore of every table on the client site. All actions logged."
+  },
+  {
+    "id": "timetable-generator",
+    "name": "Timetable Generator",
+    "category": "General",
+    "desc": "Auto-builds a conflict-free timetable (no class/teacher double-booking) from each subject weekly period demand — deterministic, no AI."
+  },
+  {
+    "id": "checkin",
+    "name": "QR Check-in",
+    "category": "General",
+    "desc": "Students self-check-in by scanning their ID-card QR (or typing admission no). No biometric hardware needed."
+  },
+  {
+    "id": "diary",
+    "name": "Student Diary",
+    "category": "General",
+    "desc": "Daily homework/classwork/behaviour log; parents view & acknowledge."
+  },
+  {
+    "id": "surveys",
+    "name": "Surveys & Forms",
+    "category": "General",
+    "desc": "Anonymous-optional feedback forms & surveys with response collection."
+  },
+  {
+    "id": "menu",
+    "name": "Menu / Meal Planner",
+    "category": "General",
+    "desc": "Weekly meal planner with allergen notes for parents."
+  },
+  {
+    "id": "settings",
+    "name": "Settings (2FA · Language · A11y)",
+    "category": "General",
+    "desc": "Free email-OTP 2FA, multi-language UI (incl. Hausa/Yoruba/Igbo), and accessibility (font scaling, high contrast)."
+  },
+  {
+    "id": "assignments",
+    "name": "Assignments / Homework",
+    "category": "General",
+    "desc": "Post & track assignments with submission and grading."
+  },
+  {
+    "id": "library",
+    "name": "Library",
+    "category": "General",
+    "desc": "Book catalogue, lending records, barcode scanning, due-date alerts."
+  },
+  {
+    "id": "digital_library",
+    "name": "Digital Library",
+    "category": "General",
+    "desc": "Teachers assign online books/links + optional comprehension questions; auto-scored marks count toward grades."
+  },
+  {
+    "id": "conduct",
+    "name": "Conduct / Behaviour",
+    "category": "General",
+    "desc": "Merit/demerit, incidents, pattern tracking."
+  },
+  {
+    "id": "health",
+    "name": "Health / Clinic",
+    "category": "General",
+    "desc": "Sick-bay visits, medical history, allergy alerts."
+  },
+  {
+    "id": "promotion",
+    "name": "Promotion / Graduation",
+    "category": "General",
+    "desc": "Automated promotion: from each student's term average vs a benchmark you set, the system drafts promote/repeat/graduate decisions. Admin reviews/edits, then applies. Graduates move to Alumni."
+  },
+  {
+    "id": "fees",
+    "name": "Fees & Payments",
+    "category": "General",
+    "desc": "Fee structures, balances, print-ready receipts, payment tracking."
+  },
+  {
+    "id": "finance",
+    "name": "School Finance",
+    "category": "General",
+    "desc": "Income/expense ledger with charts and KPI analytics."
+  },
+  {
+    "id": "leave",
+    "name": "Leave Management",
+    "category": "General",
+    "desc": "Staff leave requests with approval workflows and calendar."
+  },
+  {
+    "id": "visitors",
+    "name": "Visitor Management",
+    "category": "General",
+    "desc": "Gate-pass, check-in/out, host notifications, badges."
+  },
+  {
+    "id": "transport",
+    "name": "Transport / Bus",
+    "category": "General",
+    "desc": "Routes, GPS tracking, pick-up records."
+  },
+  {
+    "id": "announcements",
+    "name": "Announcements",
+    "category": "General",
+    "desc": "School-wide notices with priority levels and pinning."
+  },
+  {
+    "id": "events",
+    "name": "Events & Calendar",
+    "category": "General",
+    "desc": "Term calendar with RSVP, venue booking."
+  },
+  {
+    "id": "messages",
+    "name": "Messaging (WA/Email)",
+    "category": "General",
+    "desc": "Free bulk WhatsApp + email + SMS to parents/staff."
+  },
+  {
+    "id": "inbox",
+    "name": "In-App Inbox",
+    "category": "General",
+    "desc": "Private staff↔admin↔parent threaded messaging."
+  },
+  {
+    "id": "complaints",
+    "name": "Complaints & Grievance",
+    "category": "General",
+    "desc": "Submit→route→track→resolve with evidence and status."
+  },
+  {
+    "id": "broadcast",
+    "name": "Results Broadcast",
+    "category": "General",
+    "desc": "One-click send results to parents via free channels."
+  },
+  {
+    "id": "voting",
+    "name": "Voting & Polls",
+    "category": "General",
+    "desc": "Class prefects, head boy/girl, staff polls, anonymous ballots."
+  },
+  {
+    "id": "gallery",
+    "name": "Photo & Video Gallery",
+    "category": "General",
+    "desc": "Albums, Google Drive image linking, YouTube embeds."
+  },
+  {
+    "id": "eresources",
+    "name": "E-Resources / Notes",
+    "category": "General",
+    "desc": "Lesson notes, past questions, Drive-linked documents."
+  },
+  {
+    "id": "birthdays",
+    "name": "Birthdays",
+    "category": "General",
+    "desc": "Celebrate with auto-reminders and wish lists."
+  },
+  {
+    "id": "idcards",
+    "name": "Digital ID Cards",
+    "category": "General",
+    "desc": "Generate & print branded student/staff cards with a scannable QR code (encodes the ID for attendance). Pick a student or enter manually."
+  },
+  {
+    "id": "flyer",
+    "name": "Marketing Flyer",
+    "category": "General",
+    "desc": "Generate a printable, branded promotional flyer/poster for admissions and parent outreach — free lead-gen."
+  },
+  {
+    "id": "reports",
+    "name": "Reports & Export",
+    "category": "General",
+    "desc": "CSV / PDF / Excel exports + analytics dashboard."
+  },
+  {
+    "id": "directory",
+    "name": "Directory",
+    "category": "General",
+    "desc": "Searchable people directory with role filters."
+  },
+  {
+    "id": "departments",
+    "name": "Departments & Offices",
+    "category": "General",
+    "desc": "Per-department coordination, resource management."
+  },
+  {
+    "id": "parents",
+    "name": "Parent–Child Mapping",
+    "category": "General",
+    "desc": "Link parents to children for results, fees, complaints."
+  },
+  {
+    "id": "admissions",
+    "name": "Admissions & Enrollment",
+    "category": "General",
+    "desc": "Public application form → review funnel → enrollment."
+  },
+  {
+    "id": "hr",
+    "name": "Salary & Payslips",
+    "category": "General",
+    "desc": "Run staff salaries: basic, allowances, bonus, overtime, tax, pension & loan deductions with AUTO net-pay and printable professional payslips."
+  },
+  {
+    "id": "payroll",
+    "name": "Payroll Register",
+    "category": "General",
+    "desc": "The full salary register — pick staff from a list, auto-compute net pay, approve/pay status, and print a payslip for every month."
+  },
+  {
+    "id": "staff_loans",
+    "name": "Staff Loans & Advances",
+    "category": "General",
+    "desc": "Track staff loans/salary advances with monthly EMI repayment schedules, amount repaid and status (active/completed/defaulted)."
+  },
+  {
+    "id": "staff_bonus",
+    "name": "Staff Bonuses",
+    "category": "General",
+    "desc": "Record performance, 13th-month, holiday and long-service bonuses per staff with citations and pay status."
+  },
+  {
+    "id": "appraisals",
+    "name": "Staff Appraisals",
+    "category": "General",
+    "desc": "Structured performance appraisals with weighted 1–10 criteria (punctuality, teaching quality, results, teamwork, conduct), AUTO score & band, and a recommendation."
+  },
+  {
+    "id": "rubrics",
+    "name": "Grading Rubrics",
+    "category": "General",
+    "desc": "Standards-based rubrics (PowerSchool/Edsby parity): define skills/criteria and a scale so assessment aligns to learning objectives."
+  },
+  {
+    "id": "transcripts",
+    "name": "Academic Transcripts",
+    "category": "General",
+    "desc": "Cumulative academic records / transcripts per student across sessions — international standard for transfers and applications."
+  },
+  {
+    "id": "transfer_cert",
+    "name": "Transfer Certificates",
+    "category": "General",
+    "desc": "Issue transfer/leaving certificates (National Records Exchange parity) with conduct and reason for leaving."
+  },
+  {
+    "id": "counselling",
+    "name": "Counselling & Wellbeing",
+    "category": "General",
+    "desc": "Confidential student counselling/wellbeing session log with status tracking and referrals."
+  },
+  {
+    "id": "hostel",
+    "name": "Hostel / Boarding",
+    "category": "General",
+    "desc": "Block/room/bed tracking with active/vacated status."
+  },
+  {
+    "id": "alumni",
+    "name": "Alumni Network",
+    "category": "General",
+    "desc": "Graduation-year directory, mentorship, fundraising."
+  },
+  {
+    "id": "inventory",
+    "name": "Inventory & Assets",
+    "category": "General",
+    "desc": "Equipment/supplies register with location and condition."
+  },
+  {
+    "id": "certificates",
+    "name": "Certificates & Documents",
+    "category": "General",
+    "desc": "Issue branded, printable certificates (achievement, graduation, testimonial) with a unique verification code."
+  },
+  {
+    "id": "school_calendar",
+    "name": "School Calendar",
+    "category": "General",
+    "desc": "Academic calendar with holidays, mid-terms and term dates."
+  },
+  {
+    "id": "lost_found",
+    "name": "Lost & Found",
+    "category": "General",
+    "desc": "Log lost & found items, claim with photo evidence."
+  },
+  {
+    "id": "parent_meeting",
+    "name": "PTA Meeting Scheduler",
+    "category": "General",
+    "desc": "Schedule parent-teacher meetings, send reminders, log minutes."
+  },
+  {
+    "id": "book_request",
+    "name": "Book Reservation",
+    "category": "General",
+    "desc": "Students reserve library books; auto-queue when returned."
+  },
+  {
+    "id": "affective_traits",
+    "name": "Affective Domain",
+    "category": "General",
+    "desc": "Record punctuality, neatness, politeness, honesty, leadership, cooperation and attentiveness ratings for each learner. These flow into report cards."
+  },
+  {
+    "id": "psychomotor_traits",
+    "name": "Psychomotor Domain",
+    "category": "General",
+    "desc": "Record handwriting, verbal fluency, sports, crafts, drawing and music ratings for each learner. These flow into report cards."
+  },
+  {
+    "id": "report_comments",
+    "name": "Report Card Comments",
+    "category": "General",
+    "desc": "Enter class-teacher comments, principal comments and next-term begins dates for each learner report card."
+  },
+  {
+    "id": "ecosystem_products",
+    "name": "HMG Ecosystem",
+    "category": "General",
+    "desc": "Lead-generation page for the HMG Concepts ecosystem and client-school visibility. Distinct from the HMG Digital Products catalogue."
+  },
+  {
+    "id": "school_fees",
+    "name": "School Fee Structure",
+    "category": "General",
+    "desc": "Set current and next-term fee structures by class and arm. Each student dashboard and report card receives the matching bill and prior balance."
+  },
+  {
+    "id": "school_products",
+    "name": "School Products",
+    "category": "General",
+    "desc": "Manage school uniform, books, stationery and required products with price, category and stock notes for family dashboards."
+  },
+  {
+    "id": "status_manager",
+    "name": "Role & Status Manager",
+    "category": "General",
+    "desc": "Authorized administrators search people and change role/status with an audit trail. Use for approved, suspended, active and cross-role changes."
+  },
+  {
+    "id": "hmg_digital_products",
+    "name": "HMG Digital Products",
+    "category": "General",
+    "desc": "HMG Concepts Ecosystem product catalogue with official flyers and contact paths. Visible in every portal navigation."
+  },
+  {
+    "id": "lms",
+    "name": "Integrated LMS",
+    "category": "General",
+    "desc": "Unified learning platform for course tracking, video lessons, and online assignment submissions."
+  },
+  {
+    "id": "gamification",
+    "name": "Rewards & Badges (PBIS)",
+    "category": "General",
+    "desc": "Give students points for good behaviour/effort and award badges. A simple, transparent positive-reinforcement tracker — every point is logged and visible."
+  },
+  {
+    "id": "cafeteria",
+    "name": "Cafeteria & Meals",
+    "category": "General",
+    "desc": "Student meal plans, dietary restrictions tracking, and pre-paid wallets."
+  },
+  {
+    "id": "financial_aid",
+    "name": "Scholarships & Aid",
+    "category": "General",
+    "desc": "Manage fee waivers, sponsor tracking, and scholarship renewals."
+  },
+  {
+    "id": "front_desk",
+    "name": "Front Desk / Dispatch",
+    "category": "General",
+    "desc": "Track postal dispatch, calls, and walk-in admission inquiries."
+  },
+  {
+    "id": "career_counseling",
+    "name": "Career & Placement",
+    "category": "General",
+    "desc": "Track college applications, university offers, and career guidance."
+  },
+  {
+    "id": "document_builder",
+    "name": "Custom Document Builder",
+    "category": "General",
+    "desc": "Drag-and-drop builder for hall tickets, bonafide letters, and custom IDs."
+  },
+  {
+    "id": "fleet_tracking",
+    "name": "Advanced Fleet GPS",
+    "category": "General",
+    "desc": "Bus route optimization, live tracking placeholder, driver logs."
+  },
+  {
+    "id": "facility_booking",
+    "name": "Facility Booking",
+    "category": "General",
+    "desc": "Schedule science labs, sports fields, and auditorium usage."
+  },
+  {
+    "id": "compliance",
+    "name": "Compliance & Audit",
+    "category": "General",
+    "desc": "Track accreditation metrics, fire drills, and statutory inspections."
+  },
+  {
+    "id": "activity_log",
+    "name": "Audit / Activity Log",
+    "category": "General",
+    "desc": "Tamper-evident log of every create/update/delete/login — who did what, when (PowerSchool/Infinite Campus parity)."
+  },
+  {
+    "id": "academic_records",
+    "name": "Academic Records & Broadsheets",
+    "category": "General",
+    "desc": "Generate student record cards, class broadsheets and subject broadsheets for print/PDF."
+  },
+  {
+    "id": "developer",
+    "name": "About the Developer",
+    "category": "General",
+    "desc": "The developer & HMG Concepts brand bio — the last page of the site."
+  },
+  {
+    "id": "lesson_plans",
+    "name": "Lesson Plans & Curriculum",
+    "category": "General",
+    "desc": "Teachers author weekly lesson plans with objectives & resources; HODs approve (Chalk parity)."
+  },
+  {
+    "id": "behaviour",
+    "name": "Behaviour & PBIS Points",
+    "category": "General",
+    "desc": "Award merit points and badges for positive behaviour; live leaderboards (ClassDojo parity)."
+  },
+  {
+    "id": "support_plans",
+    "name": "Special Education / Support",
+    "category": "General",
+    "desc": "Track learning needs, interventions, goals and review dates per student (Provision Map parity)."
+  },
+  {
+    "id": "donations",
+    "name": "Fundraising & Donations",
+    "category": "General",
+    "desc": "Run campaigns, log donor pledges & gifts, generate thank-you receipts (Blackbaud/FreshSchools parity)."
+  },
+  {
+    "id": "substitutions",
+    "name": "Substitute / Cover",
+    "category": "General",
+    "desc": "Assign cover teachers when staff are absent; daily cover sheet & history."
+  },
+  {
+    "id": "helpdesk",
+    "name": "IT / Help Desk",
+    "category": "General",
+    "desc": "Internal ticketing for IT, maintenance and admin requests with priority & status."
+  },
+  {
+    "id": "payments_online",
+    "name": "Online Fee Payments",
+    "category": "General",
+    "desc": "Generate Paystack/Flutterwave checkout links or bank-transfer instructions — free integrations, no monthly fee."
+  }
+]
