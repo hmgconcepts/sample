@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /database/
+
+Sitemap: https://gosaportal.vercel.app/sitemap.xml

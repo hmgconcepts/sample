@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>My Profile • Powered by HMG Concepts</title><link rel="stylesheet" href="assets/css/style.css"></head><body><main style="max-width:720px;margin:40px auto;padding:20px"><div class="card"><h1>👤 My Account Profile</h1><p>View and update your account details. Students/parents should use Student Profile for academic records.</p><div id="profile-box"><span class="pulse">Loading…</span></div><div style="margin-top:16px"><a class="btn btn-outline" href="change-password.html">Change password</a> <a class="btn btn-outline" href="dashboard.html">Dashboard</a></div></div></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="assets/js/config.js"></script>
+<script src="assets/js/license.js"></script>
+<script src="assets/js/demo.js"></script><script src="assets/js/app.js"></script><script>async function load(){const sb=window.sb,box=document.getElementById('profile-box');if(!sb){box.innerHTML='Database not configured';return;}const {data:{user}}=await sb.auth.getUser();if(!user){location.href='login.html';return;}const r=await sb.from('profiles').select('*').eq('id',user.id).maybeSingle();const p=r.data||{};window.SC_PROFILE=window.SC_PROFILE||p;box.innerHTML='<div class="form-group"><label>Full name</label><input id="fn" class="form-input" value="'+esc(p.full_name||'')+'"></div><div class="form-group"><label>Email</label><input class="form-input" readonly value="'+esc(user.email||'')+'"></div><div class="form-group"><label>Phone</label><input id="ph" class="form-input" value="'+esc(p.phone||'')+'"></div><p>Role: <b>'+esc(p.role||'')+'</b> · Status: <b>'+esc(p.status||'')+'</b></p><button class="btn btn-primary" onclick="save()">Save profile</button>'; } 
+/* ENTERPRISE V6 (issues 20 & 38): the profile page shows ONLY this user's own
+   data. Students see their own student record; parents see their linked
+   children; staff see their staff record. */
+async function loadRoleCard(p,user){
+  const sb=window.sb; const role=String(p.role||'').toLowerCase();
+  const host=document.createElement('div'); host.className='card'; host.style.marginTop='16px';
+  document.querySelector('main .card').after(host);
+  const dmy=(v)=>{if(!v)return '';const d=new Date(v);return isNaN(d)?String(v):String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();};
+  if(role==='student'){
+    const {data:st}=await sb.from('students').select('*').eq('user_id',user.id).maybeSingle();
+    host.innerHTML=st?'<h3>🎓 My Student Record</h3><p><b>Name:</b> '+esc(st.full_name)+' · <b>Admission No:</b> '+esc(st.admission_no||'')+'</p><p><b>Class:</b> '+esc(((st.class||'')+' '+(st.arm||'')).trim())+' · <b>D.O.B.:</b> '+dmy(st.date_of_birth)+'</p><p><a class="btn btn-outline" href="student-profile.html">Full academic dashboard →</a> <a class="btn btn-outline" href="results.html">My results</a> <a class="btn btn-outline" href="report-cards.html">My report card (read-only)</a></p>':'<h3>🎓 My Student Record</h3><p style="color:var(--gray-500)">Your account is not yet linked to a student record — ask the school admin to link it (Students → Edit → Student login account).</p>';
+  } else if(role==='parent'){
+    const {data:links}=await sb.from('parent_child').select('student_id').eq('parent_id',user.id);
+    const ids=(links||[]).map(l=>l.student_id);
+    const kids=ids.length?(await sb.from('students').select('full_name,class,admission_no').in('id',ids)).data||[]:[];
+    host.innerHTML='<h3>👨‍👩‍👧 My Children</h3>'+(kids.length?kids.map(k=>'<p>• <b>'+esc(k.full_name)+'</b> — '+esc(k.class||'')+' ('+esc(k.admission_no||'')+')</p>').join('')+'<p><a class="btn btn-outline" href="fees.html">My children\'s fees</a> <a class="btn btn-outline" href="report-cards.html">Report cards (read-only)</a></p>':'<p style="color:var(--gray-500)">No children linked yet — ask the school admin to link you (Parent–Child Mapping page).</p>');
+  } else if(['staff','teacher'].includes(role)){
+    const {data:stf}=await sb.from('staff').select('*').eq('user_id',user.id).maybeSingle();
+    host.innerHTML='<h3>👨‍🏫 My Staff Record</h3>'+(stf?'<p><b>'+esc(stf.full_name)+'</b> · '+esc(stf.role||'')+' · Staff No: '+esc(stf.staff_no||'')+'</p><p><a class="btn btn-outline" href="teacher-overview.html">My teaching overview →</a> <a class="btn btn-outline" href="leave.html">Request leave</a></p>':'<p style="color:var(--gray-500)">No staff record linked to this account yet.</p>');
+  } else { host.remove(); }
+}
+async function save(){const sb=window.sb;const {data:{user}}=await sb.auth.getUser();const {error}=await sb.from('profiles').update({full_name:document.getElementById('fn').value,phone:document.getElementById('ph').value}).eq('id',user.id);alert(error?error.message:'Profile updated');}load();</script><div style="display:none"><a href="https://hmgconcepts.pages.dev/">Built with School Connect by HMG Concepts</a></div></body></html>
